@@ -1,0 +1,46 @@
+{
+  "name": "netspeed-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grejo-joby/netspeed-electron-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grejo-joby/netspeed-electron-app/issues"
+  },
+  "homepage": "https://github.com/grejo-joby/netspeed-electron-app#readme",
+  "devDependencies": {
+    "d3": "^6.1.1",
+    "electron": "^10.1.2",
+    "electron-packager": "^15.1.0",
+    "exceljs": "^4.1.1",
+    "puppeteer": "^5.3.0",
+    "puppeteer-extra": "^3.1.15",
+    "xlsx": "^0.16.7",
+    "asar": "^3.0.3"
+  },
+  "dependencies": {
+    "asar": "^3.0.3",
+    "chart.js": "^2.9.3",
+    "d3": "^6.1.1",
+    "exceljs": "^4.1.1",
+    "puppeteer": "^5.3.0",
+    "puppeteer-extra": "^3.1.15",
+    "xlsx": "^0.16.7"
+  },
+  "extraFiles": [
+    "assets"
+  ],
+  "files": [
+    "netspeed-electron-app-win32-x64/",
+    "netspeed-electron-app-win32-x64.zip"
+  ]
+}

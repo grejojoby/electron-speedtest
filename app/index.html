@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>NetSpeed Electron</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <script src="index.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+
+   
+</head>
+
+<body>
+   <div style="display:flex;justify-content: center;margin-top: 4%;">
+      <div id="chart-wrapper" style="flex: 0 0 75%;justify-self: center;position: relative; height:80vh; width:80vw">
+         <canvas id="chart" style="margin: auto;text-align: center;"></canvas>
+      </div>
+   </div>
+<div style="display:flex;justify-content:center;">
+   <button style="margin: 1%;" class="btn btn-primary" onclick="WriteData();">Run Test</button>
+   <button style="margin: 1%;" class="btn btn-secondary" onclick="chartDisplay();">Display Chart</button>
+</div>
+
+   <script src="view.js">chartDisplay();</script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

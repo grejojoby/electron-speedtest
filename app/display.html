@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Display</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="chart-wrapper" style="height: 500px;width: 700px;margin-left: 30%;">
+        <canvas id="chart" style="margin: auto;text-align: center;"></canvas>
+      </div>
+
+
+
+    <script>
+        Chart.defaults.global.defaultFontFamily = 'Roboto';
+        Chart.defaults.global.defaultFontColor = '#333';
+
+        function makeChart(players) {
+            var Time = players.map(function (d) { return d.time });
+            var ping = players.map(function (d) { return +d.ping });
+            var download = players.map(function (d) { return +d.download });
+            var upload = players.map(function (d) { return +d.upload });
+
+            var chart = new Chart('chart', {
+                type: 'line',
+                options: {
+                    maintainAspectRatio: false, 
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [
+                            {
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Internet Speed Test Results',
+                                    fontSize: 16
+                                }
+                            }
+                        ]
+                    }
+                },
+                data: {
+                    labels: Time,
+                    datasets: [
+                        {
+                            data: ping,
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                            borderColor: '#F15F36'
+                        },
+                        {
+                            data: download,
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                            borderColor: '#34F326'
+                        },
+                        {
+                            data: upload,
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                            borderColor: '#987456'
+                        }
+                    ]
+
+                },
+            })
+        }
+
+        d3.csv('Internet.csv')
+            .then(makeChart);
+    </script>
+
+</body>
+
+</html>
